@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Interaction from "./Interaction";
+import { FaRegThumbsUp } from "react-icons/fa";
 
 const interactions = [
   {
@@ -78,7 +79,15 @@ const ReactButton = () => {
           </span>
         </div>
       ) : (
-        "Like"
+        <div
+          className={`flex gap-2 justify-center align-middle ${
+            isHovered ? "" : "animate-pulse"
+          }`}
+        >
+          <FaRegThumbsUp size={22} />
+
+          <span>Like</span>
+        </div>
       )}
       {isHovered && (
         <div className="absolute border-gray-200 border-2 bg-white text-blue-600 top-[-45px] left-[-58px] flex gap-2 w-max px-2 transition-all duration-300 ease-in-out rounded-3xl">
