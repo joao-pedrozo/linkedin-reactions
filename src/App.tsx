@@ -12,17 +12,17 @@ const Interaction = ({
 
   return (
     <button
-      className="flex shrink-0 pb-4 pt-3 group hover:rounded-full relative"
+      className="flex shrink-0 pb-2 pt-1 group hover:rounded-full relative"
       onMouseOver={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <img
         src={imageUrl}
         alt="React Logo"
-        className="w-10 h-w-10 wtransition-all duration-300 ease-in-out group-hover:translate-y-[-15px] group-hover:scale-125"
+        className="w-9 h-w-9 transition-all duration-300 ease-in-out group-hover:translate-y-[-15px] group-hover:scale-125"
       />
       {isHovered && (
-        <div className="absolute top-[-45px] left-[-20px] bg-black gap-2 text-white font-thin px-4 py-2 rounded-full text-sm w-20 flex justify-center">
+        <div className="absolute top-[-50px] left-[-20px] bg-black gap-2 text-white font-thin px-4 py-2 rounded-full text-sm w-20 flex justify-center">
           <span>{interactionName}</span>
         </div>
       )}
@@ -37,13 +37,13 @@ function App() {
   return (
     <>
       <button
-        className="text-3xl m-64 bg-red-500 w-fit p-2 text-white font-bold relative"
+        className="text-3xl m-64 bg-red-500 w-fit p-2 text-white font-bold relative "
         onMouseOver={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(true)}
       >
         Gostei
         {isHovered && (
-          <div className="absolute text-blue-600 top-[-40px] left-[-20px] bg-blue-200 flex gap-2 w-max px-2">
+          <div className="absolute text-blue-600 top-[-40px] left-[-20px] bg-blue-200 flex gap-2 w-max px-2 transition-all duration-300 ease-in-out">
             <Interaction
               imageUrl="https://static.licdn.com/sc/h/f4ly07ldn7194ciimghrumv3l"
               interactionName="Like"
