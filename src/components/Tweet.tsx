@@ -2,6 +2,7 @@ import ReactButton, { interactions } from "./ReactButton";
 import { BiComment } from "react-icons/bi";
 import { AiOutlineRetweet, AiOutlinePlus } from "react-icons/ai";
 import { GrSend } from "react-icons/gr";
+import PostAction from "./PostAction";
 
 const Tweet = () => {
   return (
@@ -68,18 +69,9 @@ const Tweet = () => {
           <hr className="w-full my-2 border-1 inline-block" />
           <div className="flex mb-4">
             <ReactButton />
-            <button className="flex flex-1 justify-center items-center hover:bg-slate-100 rounded-xl gap-2 font-semibold w-14 py-4 opacity-30">
-              <BiComment size={22} />
-              <span>Comment</span>
-            </button>
-            <button className="flex flex-1 justify-center items-center hover:bg-slate-100 rounded-xl gap-2 font-semibold w-14 py-4 opacity-30">
-              <AiOutlineRetweet size={22} />
-              <span>Repost</span>
-            </button>
-            <button className="flex flex-1 justify-center items-center hover:bg-slate-100 rounded-xl gap-2 font-semibold w-14 py-4 opacity-30">
-              <GrSend size={22} />
-              <span>Send</span>
-            </button>
+            <PostAction text="Comment" Icon={BiComment} />
+            <PostAction text="Repost" Icon={AiOutlineRetweet} />
+            <PostAction text="Send" Icon={GrSend} />
           </div>
           <div className="flex gap-2">
             <img
