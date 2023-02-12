@@ -57,7 +57,7 @@ const Tweet = () => {
           <div className="flex mt-2 mb-1 ml-2">
             {interactions.slice(0, 3).map((interaction) => (
               <div
-                className={`bg-red-200 rounded-full w-5 h-5 flex justify-center items-center p-[3px] ml-[-7px] ${interaction.background}`}
+                className={`rounded-full w-5 h-5 flex justify-center items-center p-[3px] ml-[-7px] ${interaction.background}`}
               >
                 <img src={interaction.imageUrl} className="h-5 w-5" />
               </div>
@@ -106,7 +106,7 @@ const Tweet = () => {
                 <div className="flex items-center">
                   {interactions.slice(0, 3).map((interaction) => (
                     <div
-                      className={`bg-red-200 rounded-full w-[19px] h-[19px] flex justify-center items-center p-[3px] ml-[-7px] ${interaction.background} first:ml-0`}
+                      className={`rounded-full w-[19px] h-[19px] flex justify-center items-center p-[3px] ml-[-7px] ${interaction.background} first:ml-0`}
                     >
                       <img
                         src={interaction.imageUrl}
